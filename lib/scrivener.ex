@@ -142,7 +142,7 @@ defmodule Scrivener do
     |> exclude(:order_by)
     |> exclude(:preload)
     |> exclude(:select)
-    |> select([e], count(e.id))
+    |> select([e], count(e))
     |> repo.one
 
     ceiling(count / page_size)
